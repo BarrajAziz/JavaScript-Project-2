@@ -1,0 +1,23 @@
+// Factorial
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// Prime Number Check
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+// Fibonacci Sequence
+function fibonacci(n) {
+    const sequence = [0, 1];
+    for (let i = 2; i < n; i++) {
+        sequence.push(sequence[i - 1] + sequence[i - 2]);
+    }
+    return sequence.slice(0, n);
+}
